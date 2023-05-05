@@ -1,0 +1,10 @@
+
+input {
+
+  outline: none;
+  transition: padding 0.2s ease-in-out !important;
+
+  &:focus {
+    padding: 10px !important;
+  }
+}
