@@ -7,6 +7,7 @@ import {Provider} from "react-redux";
 import {store} from "./store.ts";
 import Register from "./pages/register/register.tsx";
 import Login from "./pages/login/login.tsx";
+import {CookiesProvider} from "react-cookie";
 
 const route = createBrowserRouter([
     {path:"",element:<App/>},
@@ -20,7 +21,10 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
 
       <Provider store={store}>
-          <RouterProvider router={route}/>
+          <CookiesProvider>
+              <RouterProvider router={route}/>
+          </CookiesProvider>
+
       </Provider>
   </React.StrictMode>,
 )

@@ -27,8 +27,9 @@ export const userSlice = createSlice({
         setUsers:(state, action:PayloadAction<user[]>) => {
             state.users = action.payload
         }
+
     }
 })
 
 export default userSlice.reducer
-export const { setIsLogin, setUsers } = userSlice.actions
+export const {setIsLogin, setUsers } = userSlice.actions
